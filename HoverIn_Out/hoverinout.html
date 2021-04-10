@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover In/Out</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function(){
+            $('img').hover(function(){
+                var src = $(this).attr('src');
+            $(this).attr("src", $(this).attr("src2"));
+            $(this).attr("src2", src);
+
+            });
+            
+        });
+    </script>    
+</head>
+<body>
+    <div id="image">
+        <img src="portfolio3.png" src2="portfolio4.png" alt="city_couple">
+       
+    </div>
+    
+</body>
+</html>

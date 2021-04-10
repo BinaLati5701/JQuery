@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JQuery Functions</title>
+   <link rel="stylesheet" href=".style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+   console.log($())
+   $(document).ready(function(){
+      $('.add').click(function(){
+         $('.add').addClass('red').css('background', 'red');
+      })
+      $('.slide').click(function(){
+         $('.icon').slideToggle('slow', function(){
+         });
+      })
+      $('.append').click(function(){
+         $('p').append('<p>This is new paragraph</p>');
+      })
+      $('.toggle').click(function(){
+         $('.flyer').toggle("slow", function(){
+         })
+      })
+      
+      $( document.body ).click(function () {
+         if ( $('p').first().is( ':hidden' ) ) {
+         $('p').slideDown( 'slow' );
+         } else {
+         $('p').hide();
+         }
+      });
+      $('a').click(function() {
+         $('.fadein').fadeIn( 3000, function() {
+         $('.fadein').css('background', 'green');
+         });
+         return false;
+      });      
+   });
+
+</script>
+</head>
+<body>
+   <div class="wrapper">
+      <h1>Add Class</h1>
+      <button class="add" type="button">AddClass</button> 
+         <p>Click the button to add class 'red' to this paragraph</p>
+      <hr>
+      <h1>Slidetoggle</h1>
+      <button class="slide" type="button">Slidetoggle</button>
+      <img class="icon" src="jQuery.png" alt="jquery">
+         <p>Click the button to slidetoggle a hidden image</p>
+      <hr>
+      <h1>Append</h1>
+      <button class="append" type="button">Append</button>
+         <p>Click the button to append a new paragraph!</p>
+      <hr>
+      <button class="toggle" type="button">Toggle</button>
+      <img class="flyer" src="fiveEleven.png" alt="flyer"> 
+      <p class="fadein">
+         Let it be known that the party of the first part
+         and the party of the second part are henceforth
+         and hereto directed to assess the allegations
+         for factual correctness... (<a href="#">click!</a>)
+      </p>
+      <hr>            
+   </div>
+</body>
+</html>

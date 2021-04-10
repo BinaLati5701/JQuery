@@ -1,0 +1,18 @@
+.wrapper{
+    width: 800px;
+    height: 1100px;
+    padding: auto;
+}
+h1{
+    margin-left: 120px;
+}
+p{
+    margin-left: 120px; 
+    margin-top: 0%;
+}
+#icon{
+    margin-left: 50px;
+}
+.flyer{
+    width: 500px;
+}

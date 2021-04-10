@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function(){
+        
+           $('.ninja').click(function(){
+              $(this).slideToggle('slow', function(){
+              });
+           })
+           $('button').click(function(){
+               $('.ninja').show();
+           })
+        
+        });
+    </script>
+    
+</head>
+<body>    
+    <div class="wrapper">
+        <h1>Disappearing Ninja</h1>
+        <div class="images1">
+            <img class="ninja" src="ninja.jpg" alt="ninja1">
+            <img class="ninja" src="ninja.jpg" alt="ninja2">
+            <img class="ninja" src="ninja.jpg" alt="ninja3">
+            <img class="ninja" src="ninja.jpg" alt="ninja4">            
+        </div>
+        <div class="images2">
+            <img class="ninja" src="ninja.jpg" alt="ninja5">
+            <img class="ninja" src="ninja.jpg" alt="ninja6">
+            <img class="ninja" src="ninja.jpg" alt="ninja7">
+            <img class="ninja" src="ninja.jpg" alt="ninja8">
+        </div>            
+        <button type="button">Restore</button>
+    </div>     
+</body>
+</html>
